@@ -1,0 +1,33 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cpu_monitor"
+        xmlns:Wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" x:Class="cpu_monitor.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="0,0,2,1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Wpf:CartesianChart Margin="0,0,10,0" Grid.Row="0">
+            <Wpf:CartesianChart.Series>
+                <Wpf:LineSeries Values="{Binding Values}" />
+            </Wpf:CartesianChart.Series>
+        </Wpf:CartesianChart>
+        <Button Content="Показать архив" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" Click="Button_Click" Height="40" Width="Auto"/>
+        <DataGrid x:Name="DataGrid" ItemsSource="{Binding}" AutoGenerateColumns="False" Grid.Row="2" SelectionChanged="DataGrid_SelectionChanged" HorizontalAlignment="Center" Margin="10,0" Width="Auto">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID точки" Width="*"  Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Загрузка процессора, %" Width="*" Binding="{Binding Cpu}" />
+                <DataGridHyperlinkColumn Header="Время создания точки" Width="*" Binding="{Binding Created_at}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
