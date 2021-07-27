@@ -6,8 +6,8 @@ CPU chart made via C# and Livecharts library
 
 Go to releases, then download and unzip CPU_Monitor.zip:
 
-![image](https://user-images.githubusercontent.com/45712837/127139055-8fbcaf34-8010-48ff-8b66-6bfdf46355ba.png)
-![image](https://user-images.githubusercontent.com/45712837/127139390-43546613-7e73-49fa-8e31-6dcd66128f11.png)
+![image](https://user-images.githubusercontent.com/45712837/127139585-584f8614-e615-4139-bd8a-e3ebbb7683fe.png)
+![image](https://user-images.githubusercontent.com/45712837/127139631-2079abec-0057-474c-8611-607e4e35c619.png)
 
 ## Runnig
 Go to CPU Monitor\Release and launch cpu_monitor.exe:
