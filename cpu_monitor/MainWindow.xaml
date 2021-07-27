@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:cpu_monitor"
         xmlns:Wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" x:Class="cpu_monitor.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="CPU Monitor" Height="450" Width="800">
     <Grid Margin="0,0,2,1">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
